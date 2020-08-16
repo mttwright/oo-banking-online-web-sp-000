@@ -17,7 +17,7 @@ class Transfer
     if self.valid?
       if @sender.balance < @amount
         @status = "rejected"
-        "Transaction rejected.  Check funds."
+        "Transaction rejected. Please check your account balance."
       else
         @sender.balance = @sender.balance - @amount
         @receiver.balance = @receiver.balance + @amount
@@ -25,7 +25,7 @@ class Transfer
       end
     else
       @status = "rejected"
-      "Transaction rejected.  Check funds."
+      "Transaction rejected. Please check your account balance."
     end
   end
   
