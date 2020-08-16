@@ -20,7 +20,7 @@ class Transfer
         @status = "rejected"
       else
         @sender.balance = @sender.balance - @amount
-        @receiver.balance = @receiver.balance - @amount
+        @receiver.balance = @receiver.balance + @amount
         @status = "complete"
       end
     end
